@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import "./EcomApp.css"
+import axios from "axios"
 
+// const BASE_URL = 'http://13.235.87.215:4000';
 
 const EcomApp = () => {
 
@@ -11,7 +13,25 @@ const EcomApp = () => {
   }
 
   let loginFunc = () =>{
-    
+   const username = document.getElementById("username")
+   const pass = document.getElementById("pass")
+
+   const data = {
+      username : username.value,
+      pass : pass.value
+  }
+
+  axios.post( "http://13.235.87.215:4000/api/v1/user/login", data)
+  .then((response) => {
+   console.log(response)
+   
+   if(response.data.success){
+      localStorage.setItem("Email", response.data.data.username)
+      localStorage.setItem("userId", response.data.data.userId)
+      localStorage.setItem("Token", response.data.data.token)
+      window.location.href="/home"
+  } })
+
   }
 
 
@@ -21,15 +41,26 @@ const EcomApp = () => {
     const sUsername = document.getElementById("sUsername")
     const sPass = document.getElementById("sPass")
 
-    const sData = {
+    const data = {
         mail : mail.value,
         fname : fname.value,
         sUsername : sUsername.value,
         sPass : sPass.value
     }
-     
-    
+   
+   axios.post("http://13.235.87.215:4000/api/v1/user/login/api/v1/user/signup", data)
+   .then((response) => {
+      console.log(response)
 
+      if(response.data.success){
+         localStorage.setItem("Email", response.data.data.username)
+         localStorage.setItem("userId", response.data.data.userId)
+         localStorage.setItem("Token", response.data.data.token)
+         window.location.href="/home"
+     }
+  
+   }).catch((error) => {console.log(error)})
+   
   }
 
 

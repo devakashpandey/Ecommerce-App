@@ -14,11 +14,17 @@
                      .login-wrapper{
                         width: 450px;
                         margin: 50px auto 0;
+                        background-color:aliceblue;
+                        padding: 40px;
+                        border-radius: 15px;
                      }
                      
                      .signup-wrapper{
                      width: 450px;
-                     margin: 50px auto 0;            
+                     margin: 50px auto 0;  
+                     background-color:aliceblue;
+                     padding: 30px;
+                     border-radius: 15px;          
                      }
                      
                      .input-group{
