@@ -8,7 +8,8 @@ let toggleSignup = () =>{
     setShowSignUp(!showSignUp)
 }
 
-const [error, setError] = useState("")
+const [error, setError] = useState(false)
+const [loginSuccess, setLoginSuccess] = useState(false)
 
 const [emailValue, setEmailValue] = useState("")
 const [passValue, setPassValue] = useState("")
@@ -28,12 +29,20 @@ let data = {
                                          
  let localData = JSON.parse(localStorage.getItem("SignUp Details"))
                                          
- if(!localData.signupMail === data.emailValue){
+ if(localData.signupMail !== data.emailValue){
    setError("Email is incorrect*")
+   setLoginSuccess("")
+ }else if(localData.signupPass !== data.passValue){
+   setError("Password is incorrect*")
+   setLoginSuccess("")
  } 
-                            
- setEmailValue("")
- setPassValue("")     
+
+ if(localData.signupMail === data.emailValue && localData.signupPass === data.passValue ){
+       setLoginSuccess("Login Successfull!!")
+       setEmailValue("")   
+       setPassValue("")
+       setError("")      
+ }
 
 }
                                          
@@ -65,7 +74,8 @@ let data = {
          !showSignUp ? (  <div className='login-wrapper'>
                       <h3 className='title text-center'>Log In</h3>
 
-                      <p className='error'>{error}</p>
+                      { error ? <p className='error'>{error}</p> : null}
+                      { loginSuccess ? <p className='success'>{loginSuccess}</p> : null}
 
                       <div className='input-group'>
                       <input type="text" className='form-control' placeholder='Username or email'
