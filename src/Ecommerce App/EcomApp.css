@@ -55,3 +55,7 @@
                      .text-info{
                        cursor: pointer;
                      }
+
+                     .error{
+                      color: red;
+                     }
