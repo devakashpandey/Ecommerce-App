@@ -12,15 +12,15 @@
                       }
                      
                      .login-wrapper{
-                        width: 450px;
+                        width: 410px;
                         margin: 50px auto 0;
                         background-color:aliceblue;
                         padding: 40px;
-                        border-radius: 15px;
+                        border-radius: 10px;
                      }
                      
                      .signup-wrapper{
-                     width: 450px;
+                     width: 410px;
                      margin: 50px auto 0;  
                      background-color:aliceblue;
                      padding: 30px;
@@ -28,7 +28,7 @@
                      }
                      
                      .input-group{
-                       margin-top: 10px;
+                       margin-top: 15px;
                      }
                      
                      .forgot-btn{
@@ -59,13 +59,15 @@
                      .error{
                       color: rgb(247, 3, 3);
                       text-align: center;
-                      background-color: rgba(170, 62, 62, 0.23);
+                      background-color: rgba(172, 131, 131, 0.16);
                       padding: 5px;
+                      border-radius: 5px;
                      }
 
                      .success{
                       color: rgb(11, 120, 1);
                       text-align: center;
-                      background-color: rgba(81, 185, 81, 0.439);
+                      background-color: rgba(108, 177, 108, 0.301);
                       padding: 5px;
+                      border-radius: 5px;
                      }
