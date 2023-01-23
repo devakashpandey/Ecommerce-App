@@ -31,18 +31,18 @@
  transform: scale(1.05);
 }
 
-.categ,p{
+.categ{
   font-size: 20px;
   background-color:rgb(214, 234, 250);
   padding: 8px 20px;
   margin: 20px;
   transition: all 0.3s;
   cursor: pointer;
-  box-shadow: 2px 3px 4px rgb(99, 144, 90);
+  box-shadow: 2px 3px 4px rgba(91, 92, 91, 0.763);
   border-radius: 5px;
 }
 
-p:hover{
+.categ:hover{
   border-top-left-radius: 25px ;
  border-bottom-right-radius: 25px ;
  border-top-right-radius: 0px ;
