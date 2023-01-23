@@ -21,7 +21,7 @@ const Home = () => {
                 {
                   category.map((currEle, id)=>{
                      return(
-                      <div className='categ-link'>
+                      <div className='categ-link' key={id}>
                         <p className='categ'>{currEle.categ}</p>
                         </div>
                      )
