@@ -39,9 +39,8 @@ let data = {
 
  if(localData.signupMail === data.emailValue && localData.signupPass === data.passValue ){
        setLoginSuccess("Login Successfull!!")
-       setEmailValue("")   
-       setPassValue("")
-       setError("")      
+       setError("")  
+       window.location.href="/home"   
  }
 
 }
