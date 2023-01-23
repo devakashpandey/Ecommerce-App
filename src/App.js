@@ -5,6 +5,7 @@ import { BrowserRouter , Routes, Route } from "react-router-dom"
 import EcomApp from './Ecommerce App/EcomApp';
 import Nav from './Ecommerce App/Nav';
 import Home from './Ecommerce App/Home';
+import Products from './Ecommerce App/Products';
 
 
 const App = () => {
@@ -21,6 +22,8 @@ const App = () => {
                 <Home/>
                </>
              }/>
+
+          <Route path="/products" element={ <Products />} /> 
 
         </Routes>
       </BrowserRouter>
